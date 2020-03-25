@@ -21,6 +21,17 @@ $('button#next').on('click', function() {
     player.setVolume(event.target.value);
   });
 
+  formatTime(totalSeconds) {
+    if (isNaN(totalSeconds)) {
+      return "-:--";
+    } else {
+      const minutes = Math.floor(totalSeconds / 60);
+      const seconds= totalSeconds % 60;
+      const wholeSecond = Math.floor(seconds)
+      return ( minutes + ":" + wholeSecond );
+    }
+  }
+  
   setInterval( () => {
     if (player.playState !== 'playing') { return; }
     const currentTime = player.getTime();
