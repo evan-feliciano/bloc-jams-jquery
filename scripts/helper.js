@@ -1,6 +1,7 @@
-$(".Helper")
-const helper = new Helper();
+class Helper {
+  playPauseAndUpdate(song) {
+    helper.playPauseAndUpdate  = $(player.playPause).val()
+  }
+};
 
-$(".Helper").playPauseAndUpdate(function (song) {
-  helper.playPauseAndUpdate  = $(player.playPause).val()
-});
+const helper = new Helper();
