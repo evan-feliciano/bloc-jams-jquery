@@ -12,6 +12,7 @@ $('button#next').on('click', function() {
 
   const nextSong = album.songs[nextSongIndex];
   player.playPause(nextSong);
+});
 
   $('#time-control input').on('input', function (event) {
     player.skipTo(event.target.value);
@@ -30,7 +31,6 @@ $('button#next').on('click', function() {
     $('#time-control input').val(percent);
     $('#time-control .total-time').text( duration );
   }, 1000);
-});
 
 $('button#previous').on('click', function() {
     if (player.playState !== 'playing') { return; }
